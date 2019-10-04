@@ -1,1 +1,20 @@
-<app-recipe-item></app-recipe-item>
+
+<div class="row mb-3">
+    <div class="col-12">
+        <button class="btn btn-success">Add Recipe</button>
+    </div>
+</div>
+<div class="row">
+        <div class="col-12">
+            <a class="d-flex justify-content-between recipe-list" *ngFor ='let recipe of recipes'>
+                <div>
+                    <h4>{{ recipe.name}}</h4>
+                    <p>{{ recipe.description}}</p>
+                </div>
+                <div class="recipe-img">
+                    <img [src]="recipe.imgPath" class="img-responsive" width="100%">
+                </div>
+            </a>
+            <app-recipe-item></app-recipe-item>
+        </div>
+    </div>
